@@ -1,4 +1,4 @@
-# karabiner-cusom
+# karabiner-custom
 My custom settings for karabiner-elements
  
 # simple-modifications
