@@ -1,0 +1,197 @@
+{
+  "title": "Control-Delete to Delete-Forward (+Option = delete word, +Command = delete line)",
+  "rules": [
+    {
+      "description": "Control-Delete to Delete-Forward (deletes next character, use both control keys to bypass)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "modifiers": {
+              "mandatory": [
+                "left_control",
+                "right_control"
+              ],
+              "optional": [
+                "any"
+              ]
+            },
+            "key_code": "delete_or_backspace"
+          },
+          "to": [
+            {
+              "repeat": true,
+              "key_code": "delete_or_backspace",
+              "modifiers": [
+                "left_control"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "modifiers": {
+              "mandatory": [
+                "control"
+              ]
+            },
+            "key_code": "delete_or_backspace"
+          },
+          "to": [
+            {
+              "repeat": true,
+              "key_code": "delete_forward"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Option-Control-Delete to Option-Delete-Forward (deletes next word, use both control keys to bypass)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "modifiers": {
+              "mandatory": [
+                "left_control",
+                "right_control"
+              ],
+              "optional": [
+                "any"
+              ]
+            },
+            "key_code": "delete_or_backspace"
+          },
+          "to": [
+            {
+              "repeat": true,
+              "key_code": "delete_or_backspace",
+              "modifiers": [
+                "left_control"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "modifiers": {
+              "mandatory": [
+                "control",
+                "option"
+              ]
+            },
+            "key_code": "delete_or_backspace"
+          },
+          "to": [
+            {
+              "repeat": true,
+              "key_code": "delete_forward",
+              "modifiers": [
+                "left_option"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Command-Control-Delete to Ctrl-K (deletes rest of line, use both control keys to bypass)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "modifiers": {
+              "mandatory": [
+                "left_control",
+                "right_control"
+              ],
+              "optional": [
+                "any"
+              ]
+            },
+            "key_code": "delete_or_backspace"
+          },
+          "to": [
+            {
+              "repeat": true,
+              "key_code": "delete_or_backspace",
+              "modifiers": [
+                "left_control"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "modifiers": {
+              "mandatory": [
+                "control",
+                "command"
+              ]
+            },
+            "key_code": "delete_or_backspace"
+          },
+          "to": [
+            {
+              "repeat": true,
+              "key_code": "k",
+              "modifiers": [
+                "left_control"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Command-Delete-Forward to Ctrl-K (deletes rest of line, use both command keys to bypass)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "modifiers": {
+              "mandatory": [
+                "left_command",
+                "right_command"
+              ]
+            },
+            "key_code": "delete_forward"
+          },
+          "to": [
+            {
+              "repeat": true,
+              "key_code": "delete_forward",
+              "modifiers": [
+                "left_command"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "modifiers": {
+              "mandatory": [
+                "command"
+              ]
+            },
+            "key_code": "delete_forward"
+          },
+          "to": [
+            {
+              "repeat": true,
+              "key_code": "k",
+              "modifiers": [
+                "left_control"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
